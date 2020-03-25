@@ -1,0 +1,28 @@
+
+<%- include("partials/header"); -%>
+
+
+</style>
+ <div class="jumbotron bg-1" id="jumbotron-one" style="height: 300px;">
+    <div class="container"><font color="white">
+    <h1>Welcome to ~HackOut~!!</h1>
+    <p> <%= startingContent %> </p>
+</font></div></div>
+<div class="container" style="color: white; background-color: rgba(0,0,0,0.75); margin: 10px; padding: 20px;">
+  <%  posts.forEach(function(post){ %>
+
+    <h1><%=post.title%></h1>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a href="/posts/<%=post.title%>">Read More</a>
+    </p>
+
+
+    <% }) %>
+<style type="text/css">
+	.footer{
+		position: static;
+	}
+</style>
+</div>
+<%- include("partials/footer"); -%>
